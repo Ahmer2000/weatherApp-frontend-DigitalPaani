@@ -1,13 +1,174 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+p {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font: 6rem;
+}
+
+.App {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  position: relative;
+}
+
+.App::before {
+  content: '';
+  background: url('./images/weatherBackground.jpg') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  max-width: 700px;
+  height: 500px;
+  margin: auto;
+  padding: 0 1rem;
+  position: relative;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.App .top {
+  width: 100%;
+  margin: 3rem auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.App .bottom {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  text-align: center;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.App .search {
+  text-align: center;
+  padding: 0.1rem;
+}
+
+.App input {
+  padding: 0.7rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  border: none;
+  margin: 1rem auto;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+::placeholder {
+  color: #f8f8f8;
+}
+
+@media (max-width:380px) {
+  .App .top {
+    width: 100%;
+    margin: 3rem auto 8rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .App .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 59%;
+    text-align: center;
+    margin: -8rem auto;
+    padding: 1rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+@media (max-width:578px) {
+  .App .top {
+    width: 100%;
+    margin: 3rem auto 8rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .App .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 59%;
+    text-align: center;
+    margin: -8rem auto;
+    padding: 1rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+@media (max-height:668px) {
+  .App .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 59%;
+    text-align: center;
+    margin: -3rem auto;
+    padding: 1rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+@media (max-height:648px) {
+  .App .bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 19%;
+    text-align: center;
+    margin: 2rem auto;
+    padding: 1rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2);
+  }
 }
