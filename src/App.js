@@ -2,6 +2,7 @@ import './App.css';
 import axios from 'axios';
 import { useState } from 'react';
 
+
 function App() {
 
   const [data,setData] = useState({});
@@ -17,7 +18,7 @@ function App() {
         }
   } 
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=ceef75abd8f45ded02bcf283e8f5c7fc`
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=ceef75abd8f45ded02bcf283e8f5c7fc`;
 
   return (
     <div className="App">
